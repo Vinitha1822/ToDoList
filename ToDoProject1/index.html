@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODOLIST</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div id="current_date">
+            <script>
+                let today = new Date();
+                let options = {
+                    weekday: "long",
+                    day: "numeric",
+                    month: "long"
+                };
+                let day = today.toLocaleDateString("en-US", options);
+                document.getElementById("current_date").innerHTML = day;
+            </script>
+        </div>
+        <div id="myDIV" class="header">
+            <h2>My To Do List</h2>
+            <input type="text" id="myInput" placeholder="Write Something...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+        <ul id="myUL">
+            <li>Hit the gym</li>
+            <li class="checked">Pay bills</li>
+            <li>Meet Friends</li>
+            <li>Buy eggs</li>
+            <li>Read a book</li>
+            <li>Organize Meeting</li>
+        </ul>
+        <script src="app.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <section class="notes-section">
+    <div class="layout clearfix">
+        <input id="user_input" name="user_input" placeholder="Enter your new note" type="text">
+        <button value="Add" id="add" onclick="addNotes()">New</button>
+        <ul id="note_List" class="notes_block"></ul>
+    </div>
+</section> -->
